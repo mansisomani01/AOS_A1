@@ -1,7 +1,7 @@
 # AOS_ASSIGNMENT1
 
 ### ASSIGNMENT1_1:- 
-
+### OVERVIEW
 1. I have tested this code using relative path.
 2. In this question we need to reverse the contents of the file and store the result in a new file in the directory named “Assignment1_1”.
 
@@ -24,6 +24,7 @@ $ ./a.out <input file name>
 ```
 
 ### ASSIGNMENT1_2:-
+### OVERVIEW
 1. I have tested this code using relative path.
 2. In this question we need to reverse a specific portion of the file and store the result in a new file in the directory named “Assignment1_2”.
 
@@ -41,3 +42,16 @@ $ ./a.out <input file name>
 10. After that progress of reversal is displayed in percentage that how much file is reversed.
 10. cout.flush() is used to ensure that output is immediately displayed without buffering.
 11. At last munmap function is used to unmap the memory regions previously mapped for input and output files and then it closes both input and output file descriptors using close.
+
+```
+$ g++ 2023201028_A1_Q2.cpp
+$ ./a.out <input file name> <start_index> <end_index>
+```
+
+### ASSIGNMENT1_3:-
+### OVERVIEW
+1. I have tested this code using relative path.
+2. In this question we need to check the permissions for the two files and the directory and check whether the content in the new file are the reverse of the old file.
+
+### EXPALNATION OF THE CODE:-
+1.

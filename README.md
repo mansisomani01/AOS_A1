@@ -32,8 +32,7 @@ $ ./a.out <input file name>
 1. Here, main function takes command-line arguments and expects 3 command-line arguments an input file name, a start character, and a stop character.
 2. If number of arguments is not equals to 4 then it will throw an error message .
 3. After that, I created a directory named Assignment1_2 using mkdir function. If status is equals to 0 then it indicates success.
-4. Input_fd opens a file specified by input_file_name for reading using the open function. If input_fd = -1 then there is error in opening the input file.
-4. After that fstat function is used to retrieve the information about the file associated with the file descriptor input_fd.
+4. Input_fd opens a file specified by input_file_name for reading using the open function. If input_fd = -1 then there is error in opening the input file. After that fstat function is used to retrieve the information about the file associated with the file descriptor input_fd.
 5. Then mmap function is used to map the contents of the file associated with input_fd into memory. It assigns the starting memory address of the mapped data to the pointer address_Input. The PROT_READ flag indicates that the memory should be mapped for reading.
 6. ftruncate function is used to set the size of the output file associated with output_fd to the same size as the input file
 7. Now agaim mmap function is used to map a region of memory for writing in the output file associated with output_fd. It assigns the starting memory address of the mapped area to the pointer address_Output. The PROT_WRITE flag indicates that the memory should be mapped for writing.
@@ -53,5 +52,21 @@ $ ./a.out <input file name> <start_index> <end_index>
 1. I have tested this code using relative path.
 2. In this question we need to check the permissions for the two files and the directory and check whether the content in the new file are the reverse of the old file.
 
-### EXPALNATION OF THE CODE:-
-1.
+### EXPLNATION OF THE CODE:-
+1. Here, main function takes command-line arguments and expects 3 command-line arguments an newfile, oldfile and directory.
+2. If number of arguments is not equals to 4 then it will throw an error message.
+3. Here we are not creating directory as we are taking path directory as a input from question-1.
+4. Input_fd opens a file specified by input_file_name for reading using the open function. If input_fd = -1 then there is error in opening the input file.
+5. After that fstat function is used to retrieve the information about the file associated with the file descriptor input_fd.
+6. Repeat 4,5 steps for outputfile and descriptory too.
+7. Then mmap function is used to map the contents of the file associated with input_fd into memory. It assigns the starting memory address of the mapped data to the pointer address_Input. The PROT_READ flag indicates that the memory should be mapped for reading.
+8. Now agaim mmap function is used to map a region of memory for writing in the output file associated with output_fd. It assigns the starting memory address of the mapped area to the pointer address_Output. The PROT_READ flag indicates that the memory should be mapped for reading.
+9. Now, run the loop till last and check if(address_Output[i] != address_Input[input_st.st_size - i - 1]) then print the message that file contents are not reversed else print that file contents are reversed.
+10. Various permissions like S_IRUSR, S_IWUSR, S_IXUSR, S_IRGRP, S_IXGRP, S_IROTH, S_IXOTH are checked on oldfile, newfile and directory and Yes/No output is being printed.
+
+```
+$ g++ 2023201028_A1_Q3.cpp
+$ ./a.out <newfile> <oldfile> <directory>
+```
+
+

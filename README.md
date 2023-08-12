@@ -1,11 +1,11 @@
 # AOS_ASSIGNMENT1
 
 ### ASSIGNMENT1_1:- 
-#### OVERVIEW
+### OVERVIEW
 1. I have tested this code using relative path.
 2. In this question we need to reverse the contents of the file and store the result in a new file in the directory named “Assignment1_1”.
 
-#### EXPLANATION OF THE CODE:- 
+### EXPLANATION OF THE CODE:- 
 1. Here , main function takes command line arguments. It assigns index-1 to input_file_name . If number of arguments is not 2 then it prints an error message.
 2. After that, I created a directory named Assignment1_1 using mkdir function. If status is equals to 0 then it indicates success .
 3. Input_fd opens a file specified by input_file_name for reading using the open function. If input_fd = -1 then there is error in opening the input file.
@@ -24,7 +24,7 @@ $ ./a.out <input file name>
 ```
 
 ### ASSIGNMENT1_2:-
-#### OVERVIEW
+### OVERVIEW
 1. I have tested this code using relative path.
 2. In this question we need to reverse a specific portion of the file and store the result in a new file in the directory named “Assignment1_2”.
 
@@ -48,11 +48,11 @@ $ ./a.out <input file name> <start_index> <end_index>
 ```
 
 ### ASSIGNMENT1_3:-
-#### OVERVIEW
+### OVERVIEW
 1. I have tested this code using relative path.
 2. In this question we need to check the permissions for the two files and the directory and check whether the content in the new file are the reverse of the old file.
 
-#### EXPLNATION OF THE CODE:-
+### EXPLNATION OF THE CODE:-
 1. Here, main function takes command-line arguments and expects 3 command-line arguments an newfile, oldfile and directory.
 2. If number of arguments is not equals to 4 then it will throw an error message.
 3. Here we are not creating directory as we are taking path directory as a input from question-1.
